@@ -43,20 +43,10 @@ Dado o schema de uma tabela (`CREATE TABLE ...`) e uma pergunta, o modelo gera a
 
 ## 5. Como executar
 
-### Opção A: Google Colab no VSCode (o que usamos)
+### Google Colab no VSCode (o que usamos)
 1. Instale no VSCode as extensões **Jupyter** e **Colab**.
 2. Abra `notebooks/colab_run.ipynb`, escolha o kernel **Colab > New Colab Server** e selecione **GPU T4**.
 3. Execute as células em ordem: verificação da GPU, dependências, dados, treino e avaliação, frontend. Mais detalhes em `docs/SETUP_COLAB.md`.
-
-### Opção B: máquina local com GPU NVIDIA
-Siga `docs/SETUP_GPU.md` (driver, CUDA, PyTorch) e rode:
-```bash
-pip install -r requirements.txt
-python scripts/check_gpu.py
-python data/prepare_data.py
-N_TRAIN=2000 python src/experiments.py      # grade completa e gráficos
-python app/app.py                            # frontend em http://127.0.0.1:7860
-```
 
 > Os adaptadores treinados **não estão no repositório** (são ignorados pelo `.gitignore`). Para abrir o frontend é preciso treinar antes pelo menos um experimento, por exemplo:
 > `python src/train.py --name E2_r16 --n_train 2000 --bs 4`
@@ -132,13 +122,6 @@ Interface em Gradio (`app/app.py`) em que o usuário informa o schema e a pergun
 **Teste 2**
 
 ![Teste 2](docs/gradio-test-2.png)
-
-## 11. Limitações e trabalhos futuros
-- Treino com apenas 2000 exemplos, em inglês e com schemas de uma tabela.
-- Conjunto de teste pequeno (200 exemplos), então diferenças de poucos pontos entre experimentos podem ser ruído.
-- Cada configuração foi treinada uma vez, sem repetições com sementes diferentes.
-- Avaliação sem execução em dados reais.
-- Futuro: mais dados, schemas com várias tabelas (Spider completo), avaliação por execução e modelos maiores.
 
 ## 13. Referências
 - Hu et al., *LoRA: Low-Rank Adaptation of Large Language Models* (2021)
