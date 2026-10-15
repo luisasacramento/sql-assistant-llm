@@ -1,0 +1,12 @@
+{
+  "name": "E5_r16_ep3",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "rank": 16,
+  "lr": 0.0002,
+  "epochs": 3.0,
+  "eff_bs": 16,
+  "n_train": 2000,
+  "train_time_s": 1564.2,
+  "peak_vram_gb": 2.96,
+  "final_loss": 0.013
+}
