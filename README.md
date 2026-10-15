@@ -2,7 +2,12 @@
 
 Fine-tuning de uma LLM open-source para converter perguntas em linguagem natural em consultas SQL, com avaliação do modelo, comparação de parâmetros e frontend em Gradio. Todo o treino e as avaliações foram feitos em **GPU**.
 
-**Grupo:** (nomes dos integrantes)
+**Grupo:** 
+- Gabriel Aparecido Cassalho Xavier - RM:99794
+- Gustavo Vegi - RM:550188
+- Lucas Rodrigues Delfino - RM550196
+- Luisa Cristina dos Santos Neves - RM:551889
+- Pedro Henrique Silva de Morais - RM:98804
 
 > ### Aviso: GPU remota
 > Nenhum integrante do grupo tinha placa de vídeo NVIDIA (necessária para CUDA), então o treino e as avaliações foram executados em uma **GPU remota do Google Colab (Tesla T4)**, conectada ao **VSCode pela extensão oficial do Colab**. As extensões de monitoramento GPU Monitor e GPU Environment leem a GPU local e por isso não se aplicam a esse cenário. A GPU foi monitorada com `nvidia-smi`, executado dentro do notebook no VSCode (print na seção 3).
